@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Wayou">
+        <meta name="description" content="hichat | a simple chat application built with node.js and websocket">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chatroom</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+     
+     <div class="wrapper">
+         <h2>Welcome to Chatroom</h2>
+         <div id="history">
+         </div>
+         <div class="control">
+            <div class="item">
+              <input type="color" placeholder="#000" id="colorstyle">
+              <input type="button" value="emoji" id="emoji">
+              <label class="imageLable">
+                <!--将button和file的位置重叠，button可见，file不可见。但触发事件时，还是file起的作用-->
+               <input type="button" value="image">
+               <input type="file" value="image" id="sendImage">
+              </label>
+               <input type="button" value="clear" id="cleanBtn">
+            
+            </div>
+          
+          <textarea placeholder="enter to send" id="message"></textarea>
+          <input type="button" value="Send" id="send">
+          <div id="emojiWrapper"></div>
+         </div>
+     </div>
+
+     <div id="loginWrapper">
+      <p id="info">connecting to server</p>
+      <div id="nickWrapper">
+          <input type="text" placeholder="nickname" id="nicknameInput">
+          <input type="button" value="OK" id="btn_ok">
+      </div>
+     </div>
+
+     <script type="text/javascript" src="js/socket.io.js"></script>
+     <script type="text/javascript" src="js/index.js"></script>
+     <script type="text/javascript">
+        /*与服务器进行连接
+        var socket=io.connect();
+        var button=document.getElementById("btn");
+        button.onclick=function(){
+            //发送一个名为foo的事件，并且传递一个字符串数据‘hello’
+            socket.emit("foo","world");
+        }*/
+     </script>
+    </body>
+    <footer>
+      <p id="status"></p>
+    </footer>
+</html>

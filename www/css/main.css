@@ -1,0 +1,104 @@
+html,body{
+	margin:0;
+	font-family: sans-serif;
+	background-color: #efefef;
+}
+.wrapper{
+	width: 500px;
+	height: 540px;
+	margin: 0 auto;
+	background-color: #ddd;
+	 padding: 5px;
+}
+h1{
+	height: 80px;
+}
+#history {
+	width: 100%;
+    height: 300px;
+    background-color: #fff;
+    /*当消息多时，会产生滚动条*/
+    overflow: auto;
+    padding: 2px;
+}
+/*如果图片过大，会破坏整个窗口的布局，或者会出现水平滚动条，
+所以我们对图片进行样式上的设置,让它最多只能以聊天窗口的99%宽度来显示*/
+#history img{
+	max-width: 99%;
+}
+/*设置消息里面的时间样式*/
+.timespan{
+    color:#ddd;
+}
+.control {
+    margin: 5px 0px;
+    position: relative;
+}
+.item{
+height: 30px;
+}
+#colorstyle {
+    width: 50px;
+    border: none;
+    padding: 0;
+}
+.imageLable {
+    position: relative;
+}
+/*将button和file的位置重叠，button可见，file不可见。但触发事件时，还是file起的作用*/
+#sendImage {
+    position: absolute;
+    width: 52px;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+#message{
+    width: 440px;
+    max-width: 440px;
+    height: 90px;
+    max-height: 90px;
+}
+#send {
+    width: 50px;
+    height: 96px;
+    float: right;
+}
+#emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 135px;
+    position: absolute;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
+#emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+#emojiWrapper img:hover {
+    background-color: blue;
+}
+
+#loginWrapper{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(5,5,5,.6);
+	text-align: center;
+	color: #fff;
+	padding-top: 200px;
+	display: block;
+}
+#nickWrapper {
+    display: none;
+}
+footer{
+width: 500px;
+margin:0 auto;
+text-align: center;
+}
